@@ -55,10 +55,12 @@ export default {
     },
   },
   mounted() {
-    this.initGameScale();
-    setTimeout(() => {
-      this.run(this.ANGLE[this.getRandom(1, 10)]);
-    }, 300);
+    window.onload = () => {
+      this.initGameScale();
+      setTimeout(() => {
+        this.run(this.ANGLE[this.getRandom(1, 10)]);
+      }, 300);
+    };
   },
 };
 </script>
